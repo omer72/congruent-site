@@ -145,7 +145,7 @@ export default function AboutPage() {
         <Box className="grid gap-6 sm:grid-cols-2">
           {values.map((v) => (
             <BrandCard key={v.title}>
-              <Typography variant="h6" gutterBottom sx={{ fontWeight: 700 }}>
+              <Typography variant="h6" component="h3" gutterBottom sx={{ fontWeight: 700 }}>
                 {v.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">

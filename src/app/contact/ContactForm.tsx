@@ -108,7 +108,7 @@ export default function ContactForm() {
             <Box key={detail.label}>
               <Typography
                 variant="overline"
-                sx={{ color: "secondary.main", fontWeight: 700 }}
+                sx={{ color: "secondary.dark", fontWeight: 700 }}
               >
                 {detail.label}
               </Typography>
@@ -122,7 +122,7 @@ export default function ContactForm() {
             className="rounded-xl p-6 mt-2"
             sx={{ bgcolor: "background.paper", border: 1, borderColor: "divider" }}
           >
-            <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+            <Typography variant="h6" component="h2" sx={{ fontWeight: 700, mb: 1 }}>
               Prefer a quick chat?
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>

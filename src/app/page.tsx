@@ -134,7 +134,7 @@ export default function Home() {
                 className="mb-3"
                 aria-hidden="true"
               />
-              <Typography variant="h6" gutterBottom sx={{ fontWeight: 700 }}>
+              <Typography variant="h6" component="h3" gutterBottom sx={{ fontWeight: 700 }}>
                 {feature.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">

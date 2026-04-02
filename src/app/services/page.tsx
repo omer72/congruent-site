@@ -134,11 +134,11 @@ export default function ServicesPage() {
             />
             <Typography
               variant="overline"
-              sx={{ color: "secondary.main", fontWeight: 700 }}
+              sx={{ color: "secondary.dark", fontWeight: 700 }}
             >
               {svc.summary}
             </Typography>
-            <Typography variant="h5" sx={{ fontWeight: 700, mt: 1, mb: 1.5 }}>
+            <Typography variant="h5" component="h3" sx={{ fontWeight: 700, mt: 1, mb: 1.5 }}>
               {svc.title}
             </Typography>
             <Typography
@@ -202,7 +202,7 @@ export default function ServicesPage() {
               >
                 {p.step}
               </Typography>
-              <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+              <Typography variant="h6" component="h4" sx={{ fontWeight: 700, mb: 1 }}>
                 {p.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
