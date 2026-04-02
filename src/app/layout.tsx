@@ -15,8 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Congruent",
-  description: "Congruent — modern site rebuild",
+  title: {
+    default: "Congruent — Clarity drives congruent growth",
+    template: "%s — Congruent",
+  },
+  description:
+    "Congruent helps ambitious organisations align strategy with execution — so every decision, team, and system moves in the same direction.",
+  icons: { icon: "/favicon.svg" },
+  openGraph: {
+    type: "website",
+    siteName: "Congruent",
+    images: [{ url: "/assets/og-image.svg", width: 1200, height: 630 }],
+  },
 };
 
 export default function RootLayout({

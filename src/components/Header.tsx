@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
@@ -27,19 +27,15 @@ export default function Header() {
     <>
       <AppBar position="sticky" elevation={0}>
         <Toolbar className="mx-auto w-full max-w-7xl px-4">
-          <Typography
-            variant="h5"
-            component={Link}
-            href="/"
-            sx={{
-              textDecoration: "none",
-              color: "primary.main",
-              fontWeight: 800,
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Congruent
-          </Typography>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/assets/logo.svg"
+              alt="Congruent"
+              width={160}
+              height={32}
+              priority
+            />
+          </Link>
           <Box sx={{ flexGrow: 1 }} />
 
           {/* Desktop nav */}

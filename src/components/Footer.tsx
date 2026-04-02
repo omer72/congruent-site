@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -15,9 +16,12 @@ export default function Footer() {
       className="mt-auto border-t border-neutral-200 bg-neutral-50"
     >
       <div className="mx-auto flex max-w-7xl flex-col sm:flex-row items-center justify-between gap-4 px-4 py-6">
-        <Typography variant="body2" color="text.secondary">
-          &copy; {new Date().getFullYear()} Congruent. All rights reserved.
-        </Typography>
+        <div className="flex items-center gap-2">
+          <Image src="/assets/logo-mark.svg" alt="" width={20} height={20} aria-hidden="true" />
+          <Typography variant="body2" color="text.secondary">
+            &copy; {new Date().getFullYear()} Congruent. All rights reserved.
+          </Typography>
+        </div>
         <nav className="flex gap-5">
           {footerLinks.map((link) => (
             <Link

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Layout, BrandButton, BrandCard } from "@/components";
@@ -13,6 +14,7 @@ const services = [
   {
     title: "Strategic Consulting",
     summary: "From vision to roadmap",
+    icon: "/assets/icon-strategy.svg",
     description:
       "We help leadership teams define where they're going and how they'll get there. Our strategy engagements produce actionable plans — not shelf-ware.",
     deliverables: [
@@ -25,6 +27,7 @@ const services = [
   {
     title: "Digital Transformation",
     summary: "Modernise without the chaos",
+    icon: "/assets/icon-digital.svg",
     description:
       "Technology change fails when it outpaces the organisation. We manage the full lifecycle — from architecture decisions to change management.",
     deliverables: [
@@ -37,6 +40,7 @@ const services = [
   {
     title: "Organisational Design",
     summary: "Structure that scales",
+    icon: "/assets/icon-org.svg",
     description:
       "The right structure unlocks speed. We redesign teams, roles, and reporting lines to match your strategy — not the other way around.",
     deliverables: [
@@ -49,6 +53,7 @@ const services = [
   {
     title: "Leadership Development",
     summary: "Build the leaders you need",
+    icon: "/assets/icon-leadership.svg",
     description:
       "High-performing organisations start at the top. Our programmes develop leaders who can navigate ambiguity and drive alignment across teams.",
     deliverables: [
@@ -119,6 +124,14 @@ export default function ServicesPage() {
       <Box component="section" className="grid gap-8 md:grid-cols-2 pb-16">
         {services.map((svc) => (
           <BrandCard key={svc.title} sx={{ height: "100%" }}>
+            <Image
+              src={svc.icon}
+              alt=""
+              width={48}
+              height={48}
+              className="mb-3"
+              aria-hidden="true"
+            />
             <Typography
               variant="overline"
               sx={{ color: "secondary.main", fontWeight: 700 }}

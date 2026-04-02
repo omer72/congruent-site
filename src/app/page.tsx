@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Layout, BrandButton, BrandCard } from "@/components";
@@ -7,16 +8,19 @@ const features = [
     title: "Strategic Consulting",
     description:
       "We partner with organisations to align strategy, structure, and culture — driving measurable outcomes.",
+    icon: "/assets/icon-strategy.svg",
   },
   {
     title: "Digital Transformation",
     description:
       "From legacy systems to modern platforms, we guide every stage of your technology evolution.",
+    icon: "/assets/icon-digital.svg",
   },
   {
     title: "Organisational Design",
     description:
       "Build high-performing teams with structures that flex, scale, and deliver.",
+    icon: "/assets/icon-org.svg",
   },
 ];
 
@@ -33,8 +37,16 @@ export default function Home() {
       {/* ── Hero ── */}
       <Box
         component="section"
-        className="relative flex flex-col items-center gap-6 py-20 md:py-28 text-center"
+        className="relative flex flex-col items-center gap-6 py-20 md:py-28 text-center overflow-hidden"
       >
+        <Image
+          src="/assets/hero-pattern.svg"
+          alt=""
+          fill
+          className="object-cover pointer-events-none select-none"
+          aria-hidden="true"
+          priority
+        />
         <Box
           className="mx-auto mb-2 h-1 w-16 rounded-full"
           sx={{ bgcolor: "secondary.main" }}
@@ -114,6 +126,14 @@ export default function Home() {
         <Box className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <BrandCard key={feature.title}>
+              <Image
+                src={feature.icon}
+                alt=""
+                width={48}
+                height={48}
+                className="mb-3"
+                aria-hidden="true"
+              />
               <Typography variant="h6" gutterBottom sx={{ fontWeight: 700 }}>
                 {feature.title}
               </Typography>
